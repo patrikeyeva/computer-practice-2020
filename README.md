@@ -1,4 +1,4 @@
 # computer-practice-2020
-# Машинное обучение
+# Machine Learning
 
-##
+## Работа с векторами и матрицами в NumPy
