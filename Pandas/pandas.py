@@ -39,3 +39,10 @@ age_median = age_sort.median() # медиана возраста
 data2 = pandas.read_csv('titanic.csv', usecols=['SibSp', 'Parch'])
 data2_corr = data2.corr(method ='pearson') # корреляция
 #print data2_corr
+
+
+data3 = pandas.read_csv('titanic.csv', usecols=['Sex', 'Name'])
+data3['Z'] = data3['Name']+ " "+ data3['Sex']
+data4 = data3['Z'].str.split(",", n = 1, expand = True) #парсим на first name и last name
+print data4[1].value_counts() #узнаём самое популярное мужское/женское имя
+
